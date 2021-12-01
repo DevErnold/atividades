@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade002</title>
+</head>
+<body>
+    <div class="main">
+        <div id="titulo">
+            <h1>Número negativo ou positivo?</h1>
+        </div>
+        <div id="informacoes">
+            <p>Insira um número, direi se é positivo ou negativo!</p>
+        </div>
+        <div id="calculo">
+            <input type="number" id="numero" placeholder="Insira um número">
+            <input type="submit" name="enviar" value="enviar" id="enviar" onclick="enviar()">
+        </div>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        function enviar(){
+            let numero = parseInt(document.getElementById('numero').value);
+            let resultado = document.getElementById('resultado')
+
+            if(numero < 0){
+                resultado.innerHTML = (`O número ${numero} é negativo`);
+            }
+
+            else if(numero > 0){
+                resultado.innerHTML = (`O número ${numero} é positivo`);
+            }
+        }
+    </script>
+</body>
+</html>

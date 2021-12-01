@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade005</title>
+</head>
+<body>
+    <div class="main">
+        <div class="titulo">
+            <h1>Consoante ou não?</h1>
+            <p>Digite uma letra e descubra se ela é uma consoante</p>
+        </div>
+        <div class="calcular">
+            <input type="text" id="letra" placeholder="Insira uma letra">
+            <input type="submit" name="enviar" value="enviar" id="enviar" onclick="enviar()">
+        </div>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        function enviar(){
+            let letra = document.getElementById('letra').value;
+            let resultado = document.getElementById('resultado');
+
+             if(letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u' || letra == 'A' || letra == 'E' || letra == 'I' || letra == 'O' || letra == 'U'){
+                 resultado.innerHTML = (`A letra ${letra} não é uma consoante`);
+             }else{
+                 resultado.innerHTML = (`A letra ${letra} é uma consoante`);
+             }
+
+            }
+        
+    </script>
+</body>
+</html>
