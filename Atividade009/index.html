@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade009</title>
+    <link rel="stylesheet" href="../style/style009.css">
+</head>
+<body>
+    <div class="main">
+        <div class="titulo">
+            <h1>Leitor de notas semestral</h1>
+            <p>Insira duas notas semestrais para o calculo da média</p>
+            <p>A - B - C estão aprovados</p>
+            <p>D - E estão reprovados</p>
+        </div>
+        <div class="calculo">
+            <input type="number" id="numero1" placeholder="Primeiro semestre">
+            <input type="number" id="numero2" placeholder="Segundo semestre">
+            <input type="submit" value="enviar" id="enviar" name="enviar" onclick="enviar()">
+        </div>
+        <div id="resultado"></div>
+        <div id="resultado2"></div>
+    </div>
+
+    <script>
+        function enviar(){
+            let numero1 = parseFloat(document.getElementById('numero1').value);
+            let numero2 = parseFloat(document.getElementById('numero2').value);
+            let resultado = document.getElementById('resultado');
+            let formula = (numero1 + numero2) / 2;
+
+            if(formula >= 9.0 || formula == 10){
+                resultado.innerHTML = (`Parabéns você foi aprovado, sua média foi ${formula} então sua pontuação é A`);
+            }
+
+            else if(formula >= 7.5 || formula == 8.9){
+                resultado.innerHTML = (`Parabéns você foi aprovado, sua média foi ${formula} então sua pontuação é B`);
+            }
+
+            else if(formula >= 6.0 || formula == 7.4){
+                resultado.innerHTML = (`Parabéns você foi aprovado, sua média foi ${formula} então sua pontuação é C`);
+            }
+
+            else if(formula >= 4.0 || formula == 5.9){
+                resultado.innerHTML = (`Infelizmente você foi reprovado, sua média foi ${formula} então sua pontuação é D`);
+            }
+
+            else if(formula >= 0 || formula == 3.9){
+                resultado.innerHTML = (`Infelizmente você foi reprovado, sua média foi ${formula} então sua pontuação é E`);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade007</title>
+</head>
+<body>
+    <div class="main">
+        <div class="titulo">
+            <h1>Qual o seu turno?</h1>
+            <p>Preenchar <strong>M</strong> para <strong>Matutino</strong>, <strong>V</strong> para <strong>Vespertino</strong> e <strong>N</strong> para <strong>Noturno</strong>.</p>
+        </div>
+        <div class="calculo">
+            <input type="text" id="letra" placeholder="Insira seu turno">
+            <input type="submit" value="enviar" id="enviar" name="enviar" onclick="enviar()">
+        </div>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        function enviar(){
+            let letra = String(document.getElementById('letra').value);
+            let resultado = document.getElementById('resultado');
+
+            if(letra == 'M' || letra == 'm'){
+                resultado.innerHTML = (`Bom dia!`);
+            }
+
+            else if(letra == 'V' || letra == 'v'){
+                resultado.innerHTML = (`Boa tarde!`);
+            }
+
+            else if(letra == 'N' || letra =='n'){
+                resultado.innerHTML = (`Boa noite!`);
+            }
+
+            else{
+                resultado.innerHTML = (`Valor inválido`);
+            }
+        }
+    </script>
+</body>
+</html>

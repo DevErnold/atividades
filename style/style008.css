@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;600;700;800&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+body{
+    background-image: url('back.jpg');
+}
+
+.main{
+    background-color: white;
+    height: 300px;
+    width: 800px;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+    padding-top: 15px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 3px 1px rgb(255, 116, 116);
+}
+
+.titulo h1{
+    margin-bottom: 20px;
+}
+
+.titulo{
+    margin-bottom: 70px;
+    color: rgb(255, 116, 116);
+    font-weight: 700;
+}
+    
+#numero1{
+    height: 25px;
+    border: none;
+    background-color: rgb(255, 116, 116);
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#numero2{
+    height: 25px;
+    border: none;
+    background-color: rgb(255, 116, 116);
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 5px;        
+}
+
+#numero3{
+    height: 25px;
+    border: none;
+    background-color: rgb(255, 116, 116);
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#enviar{
+    height: 35px;
+    width: 400px;
+    margin-top: 30px;
+    border: none;
+    background-color: rgb(255, 116, 116);
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+}
+
+#enviar:hover{
+    background-color: rgb(245, 70, 70);
+    transition: 0.2s ease-in-out;
+}
+
+#resultado{
+    color: rgb(255, 116, 116);
+    margin-top: 20px;
+}

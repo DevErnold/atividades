@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade008</title>
+    <link rel="stylesheet" href="../style/style008.css">
+</head>
+<body>
+    <div class="main">
+        <div class="titulo">
+            <h1>Qual comprar ?</h1>
+            <p>Insira 3 valores de produtos e o programa irá indicar o mais barato</p>
+        </div>
+        <div class="calculo">
+            <input type="number" id="numero1" placeholder="Primeiro preço">
+            <input type="number" id="numero2" placeholder="Segundo preço">
+            <input type="number" id="numero3" placeholder="Terceiro preço">
+            <input type="submit" name="enviar" id="enviar" value="enviar" onclick="enviar()">
+        </div>
+        <div id="resultado"></div>
+        <div id="resultado2"></div>
+    </div>
+
+    <script>
+        function enviar(){
+            let numero1 = parseFloat(document.getElementById('numero1').value);
+            let numero2 = parseFloat(document.getElementById('numero2').value);
+            let numero3 = parseFloat(document.getElementById('numero3').value);
+            let resultado = document.getElementById('resultado');
+            let resultado2 = document.getElementById('resultado2');
+
+            if(numero1 < numero2 || numero1 < numero3){
+                resultado.innerHTML = (`O produto indicado pelo programa foi o que está custando R$${numero1}`);
+            }
+
+            else if(numero2 < numero1 || numero2 < numero3){
+                resultado.innerHTML = (`O produto indicado pelo programa foi o que está custando R$${numero2}`);
+            }
+
+            else if(numero3 < numero1 || numero3 < numero2){
+                resultado2.innerHTML = (`O produto indicado pelo programa foi o que está custando R$${numero3}`);
+            }
+
+        }
+    </script>
+</body>
+</html>
